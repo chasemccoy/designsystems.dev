@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "gatsby": "2.9.11",
-    "gatsby-source-airtable": "^2.0.8",
+    "gatsby-source-airtable": "2.0.8",
     "gatsby-source-filesystem": "2.0.43",
     "react": "16.8.6",
     "react-dom": "16.8.6"
