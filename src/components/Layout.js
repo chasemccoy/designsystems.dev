@@ -7,6 +7,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-size: 18px;
     font-family: ${p => p.theme.fonts.system};
+    margin: 16px;
   }
 `
 

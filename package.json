@@ -38,7 +38,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "PATH=$PATH lint-staged"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
