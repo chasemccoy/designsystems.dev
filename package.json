@@ -19,10 +19,10 @@
     "gatsby-plugin-layout": "1.1.10",
     "gatsby-plugin-styled-components": "3.1.8",
     "gatsby-source-airtable": "2.0.9",
-    "gatsby-source-filesystem": "^2.1.29",
+    "gatsby-source-filesystem": "2.1.29",
     "react": "16.10.2",
     "react-dom": "16.10.2",
-    "styled-components": "^4.4.0"
+    "styled-components": "4.4.0"
   },
   "devDependencies": {
     "husky": "3.0.8",
