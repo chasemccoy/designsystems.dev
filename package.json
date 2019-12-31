@@ -15,19 +15,19 @@
   "dependencies": {
     "@chasemccoy/kit": "0.7.6",
     "babel-plugin-styled-components": "1.10.6",
-    "gatsby": "2.15.29",
-    "gatsby-plugin-layout": "1.1.10",
-    "gatsby-plugin-styled-components": "3.1.8",
-    "gatsby-source-airtable": "2.0.9",
-    "gatsby-source-filesystem": "^2.1.29",
-    "react": "16.10.2",
-    "react-dom": "16.10.2",
-    "styled-components": "^4.4.0"
+    "gatsby": "2.18.17",
+    "gatsby-plugin-layout": "1.1.18",
+    "gatsby-plugin-styled-components": "3.1.16",
+    "gatsby-source-airtable": "2.0.12",
+    "gatsby-source-filesystem": "2.1.43",
+    "react": "16.12.0",
+    "react-dom": "16.12.0",
+    "styled-components": "4.4.1"
   },
   "devDependencies": {
-    "husky": "3.0.8",
-    "lint-staged": "9.4.1",
-    "prettier": "1.18.2"
+    "husky": "3.1.0",
+    "lint-staged": "9.5.0",
+    "prettier": "1.19.1"
   },
   "repository": {
     "type": "git",
