@@ -1,8 +1,0 @@
-{
-  "extends": [
-    "config:js-app", 
-    ":prHourlyLimitNone", 
-    ":prConcurrentLimitNone",
-    "group:allNonMajor"
-  ]
-}
