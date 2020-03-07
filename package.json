@@ -5,20 +5,33 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "build": "eleventy",
-    "start": "yarn watch-styles & eleventy --serve",
-    "build-styles": "postcss _styles/index.css -o styles.css",
-    "watch-styles": "postcss _styles/index.css -o styles.css --watch"
+    "build": "yarn build:svelte && yarn build:css && yarn build:11ty",
+    "build:11ty": "eleventy",
+    "build:css": "postcss src/_styles/index.css -o src/_includes/css/styles.css",
+    "build:svelte": "rollup -c",
+    "start": "concurrently -n 11ty,css,svelte yarn:watch:11ty yarn:watch:css yarn:watch:svelte",
+    "watch:11ty": "eleventy --serve",
+    "watch:css": "postcss src/_styles/index.css -o src/_includes/css/styles.css --watch",
+    "watch:svelte": "rollup -c -w"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "autoprefixer": "^9.7.4",
+    "concurrently": "^5.1.0",
     "cssnano": "^4.1.10",
     "husky": "3.0.8",
     "lint-staged": "9.4.1",
+    "postcss": "^7.0.27",
     "postcss-cli": "^7.1.0",
     "postcss-import": "^12.0.1",
-    "prettier": "1.18.2",
-    "tailwindcss": "^1.2.0"
+    "prettier": "^1.19.1",
+    "resetti": "^1.1.1",
+    "rollup": "^1.31.1",
+    "rollup-plugin-svelte": "^5.1.1",
+    "rollup-plugin-terser": "^5.2.0",
+    "svelte": "^3.18.2"
   },
   "repository": {
     "type": "git",
@@ -33,7 +46,7 @@
     }
   },
   "lint-staged": {
-    "*.{js,jsx}": [
+    "*.{js,jsx,html}": [
       "prettier --write",
       "git add"
     ]

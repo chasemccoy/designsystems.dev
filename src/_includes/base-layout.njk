@@ -1,0 +1,26 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+  <title>Eleventy Blog</title> 
+  <link href="/css/styles.css" rel="stylesheet">
+  <link href="/css/components.css" rel="stylesheet">
+</head> 
+<body> 
+  <div id='root'>
+    <header>
+      Site Header
+      <a href="/README">README</a>
+    </header> 
+    <main> 
+      {{ content | safe }}
+
+      <my-app />
+    </main> 
+    <footer>Site Footer</footer> 
+  </div>
+
+  <script src="/js/components.js"></script>
+</body> 
+</html>
