@@ -11,3 +11,7 @@
 main, article {
   margin-bottom: 40px;
 }
+
+article > * + * {
+  margin-top: 1em;
+}

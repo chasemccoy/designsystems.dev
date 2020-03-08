@@ -16,18 +16,17 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.10.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
     "autoprefixer": "^9.7.4",
     "concurrently": "^5.1.0",
     "cssnano": "^4.1.10",
-    "husky": "4.2.3",
-    "lint-staged": "10.0.8",
     "postcss": "^7.0.27",
     "postcss-cli": "^7.1.0",
     "postcss-import": "^12.0.1",
     "prettier": "^1.19.1",
-    "resetti": "^1.1.1",
+    "resetti": "^1.1.2",
     "rollup": "^2.0.2",
     "rollup-plugin-svelte": "^5.1.1",
     "rollup-plugin-terser": "^5.2.0",
@@ -39,16 +38,5 @@
   },
   "bugs": {
     "url": "https://github.com/chasemccoy/designsystems.dev/issues"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,jsx,html}": [
-      "prettier --write",
-      "git add"
-    ]
   }
 }
