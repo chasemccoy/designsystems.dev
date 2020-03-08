@@ -8,17 +8,14 @@
   <link href="/css/components.css" rel="stylesheet">
 </head> 
 <body> 
-  <div id='root'>
-    <header>
-      Site Header
-      <a href="/README">README</a>
-    </header> 
+  <div id='site-wrapper'>
+    {% include 'header.njk' %}
+
     <main> 
       {{ content | safe }}
-
-      <my-app />
     </main> 
-    <footer>Site Footer</footer> 
+
+    {% include 'footer.njk' %}
   </div>
 
   <script src="/js/components.js"></script>

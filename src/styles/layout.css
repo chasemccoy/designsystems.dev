@@ -1,0 +1,13 @@
+#site-wrapper {
+  max-width: 60ch;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+#site-wrapper > header {
+  margin-bottom: 40px;
+}
+
+main, article {
+  margin-bottom: 40px;
+}

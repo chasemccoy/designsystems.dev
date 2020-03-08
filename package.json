@@ -1,17 +1,17 @@
 {
   "name": "designsystems.dev",
   "private": false,
-  "description": "",
+  "description": "A practical guide to engineering design systems for products at scale.",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
     "build": "yarn build:svelte && yarn build:css && yarn build:11ty",
     "build:11ty": "eleventy",
-    "build:css": "postcss src/_styles/index.css -o src/_includes/css/styles.css",
+    "build:css": "postcss src/styles/index.css -o src/_includes/css/styles.css",
     "build:svelte": "rollup -c",
-    "start": "concurrently -n 11ty,css,svelte yarn:watch:11ty yarn:watch:css yarn:watch:svelte",
+    "start": "concurrently -n css,svelte,11ty yarn:watch:css yarn:watch:svelte yarn:watch:11ty",
     "watch:11ty": "eleventy --serve",
-    "watch:css": "postcss src/_styles/index.css -o src/_includes/css/styles.css --watch",
+    "watch:css": "postcss src/styles/index.css -o src/_includes/css/styles.css --watch",
     "watch:svelte": "rollup -c -w"
   },
   "devDependencies": {
@@ -21,17 +21,17 @@
     "autoprefixer": "^9.7.4",
     "concurrently": "^5.1.0",
     "cssnano": "^4.1.10",
-    "husky": "3.0.8",
-    "lint-staged": "9.4.1",
+    "husky": "4.2.3",
+    "lint-staged": "10.0.8",
     "postcss": "^7.0.27",
     "postcss-cli": "^7.1.0",
     "postcss-import": "^12.0.1",
     "prettier": "^1.19.1",
     "resetti": "^1.1.1",
-    "rollup": "^1.31.1",
+    "rollup": "^2.0.2",
     "rollup-plugin-svelte": "^5.1.1",
     "rollup-plugin-terser": "^5.2.0",
-    "svelte": "^3.18.2"
+    "svelte": "^3.19.2"
   },
   "repository": {
     "type": "git",

@@ -11,10 +11,15 @@ module.exports = config => {
     'node_modules/resetti/*.min.css': 'css/',
   });
 
+  config.addCollection('docs', collection => {
+    return [...collection.getFilteredByGlob('./docs/*.md')];
+  });
+
   return {
     dir: {
-      input: 'src',
       output: 'dist',
+      includes: 'src/_includes',
+      data: 'src/_data',
     },
   };
 };

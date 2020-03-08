@@ -1,6 +1,0 @@
-@import "resetti";
-
-:root {
-  --root-font-size: 18px;
-  font-family: var(--system-fonts);
-} 
