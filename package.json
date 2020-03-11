@@ -1,7 +1,7 @@
 {
   "name": "designsystems.dev",
   "private": false,
-  "description": "A practical guide to engineering design systems for products at scale.",
+  "description": "A knowledge base and practical guide for developing design systems at scale.",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {

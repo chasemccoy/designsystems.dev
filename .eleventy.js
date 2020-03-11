@@ -25,5 +25,7 @@ module.exports = config => {
       includes: 'src/_includes',
       data: 'src/_data',
     },
+    markdownTemplateEngine: "njk",
+    htmlTemplateEngine: "njk"
   };
 };

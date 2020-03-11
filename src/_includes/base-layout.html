@@ -9,13 +9,13 @@
 </head> 
 <body> 
   <div id='site-wrapper'>
-    {% include 'header.njk' %}
+    {% include 'header.html' %}
 
     <main> 
       {{ content | safe }}
     </main> 
 
-    {% include 'footer.njk' %}
+    {% include 'footer.html' %}
   </div>
 
   <script src="/js/components.js"></script>

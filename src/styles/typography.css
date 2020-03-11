@@ -2,3 +2,18 @@
   --root-font-size: 18px;
   font-family: var(--system-fonts);
 }
+
+blockquote {
+  opacity: 0.6;
+  padding-left: 1.5em;
+  border-left: 4px solid silver;
+}
+
+pre {
+  border: 1px solid silver;
+  padding: 0.5em 1em;
+}
+
+.doc-list-active a {
+  font-weight: bold;
+}
