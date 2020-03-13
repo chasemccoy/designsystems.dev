@@ -3,7 +3,11 @@ layout: base-layout
 ---
 
 <article>
-  <header><h2>{{ title }}</h2></header>
+  <header><h1>{{ title }}</h1></header>
+
+  {% if content | toc %}<h2>Table of contents</h2>{% endif %}
+  {{ content | toc(tags=['h2', 'h3']) | safe }}
+
   {{ content | safe }}
 </article>
 

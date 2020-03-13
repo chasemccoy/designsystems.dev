@@ -1,0 +1,7 @@
+nav.toc ol {
+  list-style-type: disc;
+}
+
+nav.toc ol ol {
+  list-style-type: circle;
+}
