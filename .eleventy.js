@@ -3,6 +3,10 @@ const markdownIt = require('markdown-it');
 let markdownItAnchor = require('markdown-it-anchor');
 const pluginTOC = require('eleventy-plugin-nesting-toc');
 
+const extractExcerpt = (file, options) => {
+  file.excerpt = file.data.excerpt || file.content.split('\n').slice(0, 2).join(' ')
+}
+
 module.exports = config => {
   config.addPlugin(syntaxHighlight);
   config.addPlugin(pluginTOC);
@@ -25,12 +29,16 @@ module.exports = config => {
 
   const options = {
     html: true,
+    typographer: true,
     // Autoconvert URL-like text to links
     linkify: true,
-    typographer: true,
   };
   const markdownLib = markdownIt(options).use(markdownItAnchor);
   config.setLibrary('md', markdownLib);
+
+  config.setFrontMatterParsingOptions({
+    excerpt: extractExcerpt
+  });
 
   return {
     dir: {

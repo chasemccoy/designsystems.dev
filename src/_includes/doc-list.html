@@ -2,10 +2,10 @@
   <h3>Pages</h3>
 
   <ul>
-  {%- for doc in collections.docs -%}
-    <li {% if doc.url == page.url %} class="doc-list-active" {% endif %}>
+  {%- for doc in collections.docs %}
+    <li {%- if doc.url == page.url -%} class="doc-list-active" {%- endif -%}>
       <a href="{{ doc.url }}">{{ doc.data.title }}</a>
     </li>
-  {%- endfor -%}
+  {% endfor -%}
   </ul>
 </aside>
