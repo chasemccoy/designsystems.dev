@@ -5,8 +5,11 @@ layout: base-layout
 <article>
   <header><h1>{{ title }}</h1></header>
 
-  {% if content | toc %}<h2>Table of contents</h2>{% endif %}
-  {{ content | toc(tags=['h2', 'h3']) | safe }}
+  {% if content | toc %}
+    <h2>Table of contents</h2>
+    {{ content | toc(tags=['h2', 'h3']) | safe }}
+    <hr />
+  {% endif %}
 
   {{ content | safe }}
 </article>
