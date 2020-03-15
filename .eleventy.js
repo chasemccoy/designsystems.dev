@@ -1,15 +1,42 @@
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const markdownIt = require('markdown-it');
-let markdownItAnchor = require('markdown-it-anchor');
+const markdownItAnchor = require('markdown-it-anchor');
 const pluginTOC = require('eleventy-plugin-nesting-toc');
 
-const extractExcerpt = (file, options) => {
-  file.excerpt = file.data.excerpt || file.content.split('\n').slice(0, 2).join(' ')
-}
+const extractExcerpt = doc => {
+  if (!doc.hasOwnProperty('templateContent')) {
+    console.warn(
+      '❌ Failed to extract excerpt: Document has no property `templateContent`.'
+    );
+    return;
+  }
+
+  if (doc.data && doc.data.excerpt) return doc.data.excerpt;
+
+  const pCloseTag = '</p>';
+  const content = doc.templateContent
+  if (content.includes(pCloseTag)) {
+    return content.substring(
+      0,
+      content.indexOf(pCloseTag) + pCloseTag.length
+    );
+  }
+
+  return null;
+};
+
+const markdownOptions = {
+  html: true,
+  typographer: true,
+  // Autoconvert URL-like text to links
+  linkify: true,
+};
 
 module.exports = config => {
   config.addPlugin(syntaxHighlight);
   config.addPlugin(pluginTOC);
+
+  config.addShortcode('excerpt', post => extractExcerpt(post));
 
   config.addPassthroughCopy({
     'src/_includes/css/*': 'css',
@@ -27,18 +54,12 @@ module.exports = config => {
     return [...collection.getFilteredByGlob('./docs/*.md')];
   });
 
-  const options = {
-    html: true,
-    typographer: true,
-    // Autoconvert URL-like text to links
-    linkify: true,
-  };
-  const markdownLib = markdownIt(options).use(markdownItAnchor);
+  const markdownLib = markdownIt(markdownOptions).use(markdownItAnchor);
   config.setLibrary('md', markdownLib);
 
-  config.setFrontMatterParsingOptions({
-    excerpt: extractExcerpt
-  });
+  // config.setFrontMatterParsingOptions({
+  //   excerpt: extractExcerpt,
+  // });
 
   return {
     dir: {
