@@ -3,7 +3,7 @@
 
   <ul>
   {%- for doc in collections.docs %}
-    <li {%- if doc.url == page.url -%} class="doc-list-active" {%- endif -%}>
+    <li {% if doc.url == page.url -%} class="doc-list-active" {%- endif -%}>
       <a href="{{ doc.url }}">{{ doc.data.title }}</a>
     </li>
   {% endfor -%}

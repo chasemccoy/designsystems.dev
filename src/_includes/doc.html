@@ -4,6 +4,8 @@ layout: base-layout
 
 <article>
   <header><h1>{{ title }}</h1></header>
+  
+  <img class='doc-header-image pixel' src="/img/{{ title | slug }}.png" />
 
   {% if content | toc %}
     <h2>Table of contents</h2>

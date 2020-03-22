@@ -1,0 +1,9 @@
+<ul class='doc-grid'>
+{%- for doc in collections.docs %}
+  <li {% if doc.url == page.url -%} class="doc-list-active" {%- endif -%}>
+    <img src="/img/{{ doc.data.title | slug }}.png" />
+    <h2><a href="{{ doc.url }}">{{ doc.data.title }}</a></h2>
+    <p>{% excerpt doc %}</p>
+  </li>
+{% endfor -%}
+</ul>

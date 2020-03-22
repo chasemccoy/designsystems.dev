@@ -1,0 +1,14 @@
+/* body {
+  background: #151515;
+  color: white;
+}
+
+a {
+  color: white;
+} */
+
+.pixel {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+}

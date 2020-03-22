@@ -5,3 +5,36 @@ nav.toc ol {
 nav.toc ol ol {
   list-style-type: circle;
 }
+
+img.doc-header-image {
+  max-width: none;
+  width: calc(100% + 10em);
+  margin-left: -5em;
+}
+
+ul.doc-grid {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.5em -0.5em 0;
+}
+
+ul.doc-grid li {
+  list-style-type: none;
+  display: block;
+  width: 100%;
+  padding: 0.5em 0.5em 0;
+}
+
+ul.doc-grid img {
+  /* height: 180px; */
+  width: 100%;
+  object-fit: cover;
+  margin-bottom: 0.5em;
+}
+
+ul.doc-grid p {
+  margin-top: 0.3em;
+  margin-bottom: 1em;
+  /* font-size: 0.8em; */
+}

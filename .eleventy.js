@@ -16,10 +16,12 @@ const extractExcerpt = doc => {
   const pCloseTag = '</p>';
   const content = doc.templateContent
   if (content.includes(pCloseTag)) {
-    return content.substring(
+    const firstParagraph = content.substring(
       0,
       content.indexOf(pCloseTag) + pCloseTag.length
     );
+    const withoutHTMLTags = firstParagraph.replace(/<[^>]+>/g, '')
+    return withoutHTMLTags
   }
 
   return null;
@@ -49,6 +51,9 @@ module.exports = config => {
   config.addPassthroughCopy({
     'node_modules/resetti/*.min.css': 'css/',
   });
+  config.addPassthroughCopy({
+    'src/img/*': 'img/',
+  });
 
   config.addCollection('docs', collection => {
     return [...collection.getFilteredByGlob('./docs/*.md')];
@@ -56,10 +61,6 @@ module.exports = config => {
 
   const markdownLib = markdownIt(markdownOptions).use(markdownItAnchor);
   config.setLibrary('md', markdownLib);
-
-  // config.setFrontMatterParsingOptions({
-  //   excerpt: extractExcerpt,
-  // });
 
   return {
     dir: {
