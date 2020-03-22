@@ -1,3 +1,7 @@
+:root {
+  --wrapper-max-width: 100ch;
+}
+
 /* body {
   background: #151515;
   color: white;
@@ -8,7 +12,7 @@ a {
 } */
 
 .pixel {
-  image-rendering: pixelated;
+  /* image-rendering: pixelated;
   image-rendering: -moz-crisp-edges;
-  image-rendering: crisp-edges;
+  image-rendering: crisp-edges; */
 }

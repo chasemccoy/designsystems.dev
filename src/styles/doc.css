@@ -6,30 +6,48 @@ nav.toc ol ol {
   list-style-type: circle;
 }
 
+img.doc-image {
+  border-radius: 12px;
+  /* border: 2px solid black; */
+}
+
 img.doc-header-image {
-  max-width: none;
-  width: calc(100% + 10em);
-  margin-left: -5em;
+  /* max-width: none; */
+  /* width: calc(100% + 10em);
+  margin-left: -5em; */
+  width: 100%;
 }
 
 ul.doc-grid {
   padding: 0;
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  margin: -0.5em -0.5em 0;
+  margin: -0.5em -0.5em 0; */
+
+  --auto-grid-min-size: 20rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+  grid-gap: 3rem;
+}
+
+@media screen and (max-width: 30rem) {
+  ul.doc-grid {
+    --auto-grid-min-size: 100%;
+  }
 }
 
 ul.doc-grid li {
   list-style-type: none;
   display: block;
-  width: 100%;
+  /* width: 50%;
   padding: 0.5em 0.5em 0;
+  min-width: 30ch; */
 }
 
 ul.doc-grid img {
   /* height: 180px; */
-  width: 100%;
-  object-fit: cover;
+  /* width: 100%;
+  object-fit: cover; */
   margin-bottom: 0.5em;
 }
 
