@@ -1,6 +1,10 @@
 :root {
   --root-font-size: 18px;
-  font-family: var(--system-fonts);
+  font-family: Georgia, serif;
+}
+
+a {
+  color: black;
 }
 
 blockquote {
@@ -10,8 +14,22 @@ blockquote {
 }
 
 pre {
-  border: 1px solid silver;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
   padding: 0.5em 1em;
+
+  code {
+    background: transparent;
+    padding: 0;
+  }
+}
+
+code {
+  font-size: 0.9em;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 2px 6px;
+  border-radius: 4px;
+  white-space: nowrap;
 }
 
 .doc-list-active a {

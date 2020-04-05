@@ -3,5 +3,5 @@ exports.data = {
 }
 
 exports.render = function(data) {    
-  return `${this.docs(data.collections.docs)}`
+  return `${this.docs(data.collections.docs, this.excerpt)}`
 }

@@ -1,8 +1,12 @@
 #site-wrapper {
   max-width: var(--wrapper-max-width);
   min-height: 100vh;
-  margin: 0 auto;
-  padding: 32px 16px;
+  /* margin: 0 auto; */
+  padding: 32px 16px 32px 64px;
+
+  @media screen and (max-width: 100ch) {
+    padding: 32px 16px;
+  }
 }
 
 #site-wrapper > header {
@@ -13,6 +17,15 @@ main, article {
   margin-bottom: 40px;
 }
 
+article {
+  max-width: var(--article-max-width);
+}
+
 article > * + * {
   margin-top: 1em;
+}
+
+article > p + p {
+  text-indent: 1em;
+  margin-top: 0;
 }
