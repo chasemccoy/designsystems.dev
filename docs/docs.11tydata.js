@@ -1,4 +1,4 @@
 module.exports = {
   layout: 'doc',
-  permalink: '{{page.fileSlug}}/index.html',
+  permalink: '{{page.fileSlug}}/index.html'
 };

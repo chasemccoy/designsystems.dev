@@ -1,6 +1,7 @@
 <svelte:options tag="my-app" />
 
 <script>
+  export let foo = undefined;
   let count = 1;
 
   // the `$:` means 're-run whenever these values change'
@@ -13,6 +14,7 @@
 </script>
 
 <main>
+  {#if foo}{foo}{/if}
   <button on:click="{handleClick}">Count: {count}</button>
 
   <hr />

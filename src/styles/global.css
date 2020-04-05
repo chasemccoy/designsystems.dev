@@ -16,3 +16,14 @@ a {
   image-rendering: -moz-crisp-edges;
   image-rendering: crisp-edges; */
 }
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  --gap: 16px;
+  margin: calc(var(--gap) / -2);
+
+  & > * {
+    padding: calc(var(--gap) / 2);
+  }
+}

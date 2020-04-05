@@ -2,30 +2,8 @@ const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
 const pluginTOC = require('eleventy-plugin-nesting-toc');
-
-const extractExcerpt = doc => {
-  if (!doc.hasOwnProperty('templateContent')) {
-    console.warn(
-      '❌ Failed to extract excerpt: Document has no property `templateContent`.'
-    );
-    return;
-  }
-
-  if (doc.data && doc.data.excerpt) return doc.data.excerpt;
-
-  const pCloseTag = '</p>';
-  const content = doc.templateContent
-  if (content.includes(pCloseTag)) {
-    const firstParagraph = content.substring(
-      0,
-      content.indexOf(pCloseTag) + pCloseTag.length
-    );
-    const withoutHTMLTags = firstParagraph.replace(/<[^>]+>/g, '')
-    return withoutHTMLTags
-  }
-
-  return null;
-};
+const docGridShortcode = require('./src/shortcodes/doc-grid');
+const excerpt = require('./src/shortcodes/excerpt');
 
 const markdownOptions = {
   html: true,
@@ -34,11 +12,13 @@ const markdownOptions = {
   linkify: true,
 };
 
-module.exports = config => {
+module.exports = function(config) {
   config.addPlugin(syntaxHighlight);
   config.addPlugin(pluginTOC);
 
-  config.addShortcode('excerpt', post => extractExcerpt(post));
+  config.addShortcode('excerpt', excerpt);
+  config.addShortcode('docs', docGridShortcode);
+  config.addFilter('log', thing => console.log(thing));
 
   config.addPassthroughCopy({
     'src/_includes/css/*': 'css',
@@ -48,9 +28,6 @@ module.exports = config => {
     'src/_includes/js/*': 'js',
   });
 
-  config.addPassthroughCopy({
-    'node_modules/resetti/*.min.css': 'css/',
-  });
   config.addPassthroughCopy({
     'src/img/*': 'img/',
   });

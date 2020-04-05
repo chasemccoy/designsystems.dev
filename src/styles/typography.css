@@ -17,3 +17,7 @@ pre {
 .doc-list-active a {
   font-weight: bold;
 }
+
+#site-header h1 a {
+  text-decoration: none;
+}
