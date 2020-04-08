@@ -19,6 +19,7 @@ main, article {
 
 article {
   max-width: var(--article-max-width);
+  hyphens: auto;
 }
 
 article > * + * {
@@ -26,6 +27,6 @@ article > * + * {
 }
 
 article > p + p {
-  text-indent: 1em;
+  text-indent: 1.5em;
   margin-top: 0;
 }

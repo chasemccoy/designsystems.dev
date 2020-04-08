@@ -1,6 +1,11 @@
 :root {
   --wrapper-max-width: 100ch;
   --article-max-width: 60ch;
+
+  --root-font-size: 18px;
+  --font-text: Georgia, serif;
+  --font-header: var(--system-fonts);
+  --font-mono: "Input Mono", "Source Code Pro", "Monaco", monospace;
 }
 
 .flex {

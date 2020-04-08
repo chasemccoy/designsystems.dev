@@ -1,6 +1,10 @@
 :root {
-  --root-font-size: 18px;
-  font-family: Georgia, serif;
+  font-family: var(--font-text);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-header);
 }
 
 a {
@@ -14,6 +18,7 @@ blockquote {
 }
 
 pre {
+  font-family: var(--font-mono);
   background: rgba(0, 0, 0, 0.05);
   border-radius: 8px;
   padding: 0.5em 1em;
@@ -25,9 +30,10 @@ pre {
 }
 
 code {
-  font-size: 0.9em;
+  font-family: var(--font-mono);
+  font-size: 0.8em;
   background: rgba(0, 0, 0, 0.05);
-  padding: 2px 6px;
+  padding: 4px 6px 2px;
   border-radius: 4px;
   white-space: nowrap;
 }
