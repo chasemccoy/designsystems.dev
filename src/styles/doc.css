@@ -16,25 +16,15 @@ img.doc-header-image {
 
 ul.doc-grid {
   padding: 0;
-  /* --auto-grid-min-size: 20rem;
+  --auto-grid-min-size: 20rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
-  grid-gap: 2rem;
-
-  @media screen and (max-width: 30rem) {
-    --auto-grid-min-size: 100%;
-    background: red;
-  } */
+  grid-template-columns: repeat(auto-fill, minmax(min(var(--auto-grid-min-size), 100%), 1fr));
+  grid-gap: 1rem;
 }
 
 ul.doc-grid li {
   list-style-type: none;
   display: block;
-  width: 50%;
-
-  @media screen and (max-width: 30rem) {
-    width: 100%;
-  }
 }
 
 ul.doc-grid img {

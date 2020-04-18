@@ -44,9 +44,11 @@ module.exports = function(config) {
   return {
     dir: {
       output: 'dist',
-      includes: 'src/_includes',
-      data: 'src/_data',
+      includes: 'src/includes',
+      layouts: 'src/layouts',
+      data: 'src/data',
     },
+    templateFormats: ['njk', 'md', '11ty.js'],
     markdownTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
   };

@@ -7,11 +7,11 @@
   "scripts": {
     "build": "yarn build:svelte && yarn build:css && yarn build:11ty",
     "build:11ty": "eleventy",
-    "build:css": "postcss src/styles/index.css -o src/_includes/css/styles.css",
+    "build:css": "postcss src/styles/index.css -o src/includes/css/styles.css",
     "build:svelte": "rollup -c",
     "start": "concurrently -n css,svelte,11ty yarn:watch:css yarn:watch:svelte yarn:watch:11ty",
     "watch:11ty": "eleventy --serve",
-    "watch:css": "postcss src/styles/index.css -o src/_includes/css/styles.css --watch",
+    "watch:css": "postcss src/styles/index.css -o src/includes/css/styles.css --watch",
     "watch:svelte": "rollup -c -w"
   },
   "devDependencies": {

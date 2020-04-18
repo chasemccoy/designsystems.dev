@@ -1,5 +1,5 @@
 module.exports = function(data, excerpt) {    
-  return `<ul class='doc-grid flex'>
+  return `<ul class='doc-grid'>
     ${data.map(function(doc) {
       return `<li>
         <img src="/img/${doc.fileSlug}.png" class='doc-image' />
