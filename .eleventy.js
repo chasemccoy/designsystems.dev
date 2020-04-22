@@ -23,7 +23,7 @@ module.exports = function(config) {
   config.addFilter('log', thing => console.log(thing));
 
   config.addPassthroughCopy({
-    'src/_includes/css/*': 'css',
+    'src/includes/css/*': 'css',
   });
 
   config.addPassthroughCopy({
