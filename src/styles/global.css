@@ -18,3 +18,10 @@
     padding: calc(var(--gap) / 2);
   }
 }
+
+body {
+  @media (prefers-color-scheme: dark) {
+    background: #181E24;
+    color: #eee;
+  }
+}
