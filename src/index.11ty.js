@@ -1,7 +1,7 @@
 exports.data = {
-  permalink: "index.html"
-}
+  permalink: 'index.html',
+};
 
-exports.render = function(data) {    
-  return `${this.docs(data.collections.docs)}`
-}
+exports.render = function(data) {
+  return `${this.docs(data.collections.docs)}`;
+};

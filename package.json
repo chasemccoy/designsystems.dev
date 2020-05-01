@@ -1,7 +1,7 @@
 {
-  "name": "designsystems.dev",
+  "name": "designsystemsdev",
   "private": false,
-  "description": "A technology-agnostic knowledge base and practical guide for developing design systems at scale.",
+  "description": "",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -36,5 +36,6 @@
   },
   "dependencies": {
     "postcss-nested": "^4.2.1"
-  }
+  },
+  "keywords": []
 }
