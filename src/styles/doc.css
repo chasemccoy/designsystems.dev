@@ -6,10 +6,6 @@ nav.toc ol {
   }
 }
 
-/* img.doc-image {
-  border-radius: 12px;
-} */
-
 img.doc-header-image {
   width: 100%;
 }
@@ -18,7 +14,10 @@ ul.doc-grid {
   padding: 0;
   --auto-grid-min-size: 20rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(min(var(--auto-grid-min-size), 100%), 1fr));
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(min(var(--auto-grid-min-size), 100%), 1fr)
+  );
   grid-gap: 1rem;
 }
 
