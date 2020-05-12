@@ -1,7 +1,7 @@
 {
-  "name": "designsystemsdev",
+  "name": "designsystems.dev",
   "private": false,
-  "description": "",
+  "description": "A technology-agnostic knowledge base and practical guide for developing design systems at scale.",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
@@ -13,18 +13,18 @@
     "watch:css": "postcss src/styles/index.css -o src/includes/css/styles.css --watch"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.10.0",
+    "@11ty/eleventy": "^0.11.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
-    "autoprefixer": "^9.7.4",
-    "concurrently": "^5.1.0",
+    "autoprefixer": "^9.7.6",
+    "concurrently": "^5.2.0",
     "cssnano": "^4.1.10",
     "eleventy-plugin-error-overlay": "^0.1.2",
     "eleventy-plugin-nesting-toc": "^1.2.0",
-    "markdown-it-anchor": "^5.2.5",
-    "postcss": "^7.0.27",
-    "postcss-cli": "^7.1.0",
+    "markdown-it-anchor": "^5.2.7",
+    "postcss": "^7.0.30",
+    "postcss-cli": "^7.1.1",
     "postcss-import": "^12.0.1",
-    "prettier": "^1.19.1",
+    "prettier": "^2.0.5",
     "resetti": "^1.1.3"
   },
   "repository": {
