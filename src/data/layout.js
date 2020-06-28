@@ -1,1 +1,1 @@
-module.exports = 'base-layout';
+module.exports = 'base';

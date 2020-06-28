@@ -1,11 +1,9 @@
 ---
-layout: base-layout
+layout: page
 ---
 
 <article>
   <header><h1>{{ title }}</h1></header>
-  
-  {# <img class='doc-header-image doc-image' src="/img/{{ title | slug }}.png" /> #}
 
   {% if content | toc %}
     <h2>Table of contents</h2>
@@ -15,5 +13,3 @@ layout: base-layout
 
   {{ content | safe }}
 </article>
-
-{% include 'doc-list.html' %}

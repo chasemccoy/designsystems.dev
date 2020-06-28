@@ -3,7 +3,6 @@ const ErrorOverlay = require('eleventy-plugin-error-overlay');
 const markdownIt = require('markdown-it');
 const markdownItAnchor = require('markdown-it-anchor');
 const pluginTOC = require('eleventy-plugin-nesting-toc');
-const docGridShortcode = require('./src/shortcodes/doc-grid');
 const excerpt = require('./src/shortcodes/excerpt');
 
 const markdownOptions = {
@@ -19,7 +18,6 @@ module.exports = function(config) {
   config.addPlugin(ErrorOverlay);
 
   config.addShortcode('excerpt', excerpt);
-  config.addShortcode('docs', docGridShortcode);
   config.addFilter('log', thing => console.log(thing));
 
   config.addPassthroughCopy({

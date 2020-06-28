@@ -64,5 +64,7 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
-_site
 dist
+
+# Hide compiled CSS
+src/includes/css/*

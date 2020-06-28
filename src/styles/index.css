@@ -1,6 +1,6 @@
 @import "resetti";
+@import "tokens.css";
 @import "typography.css";
 @import "global.css";
 @import "layout.css";
 @import "prism.css";
-@import "doc.css";

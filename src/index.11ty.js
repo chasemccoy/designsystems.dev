@@ -3,5 +3,10 @@ exports.data = {
 };
 
 exports.render = function(data) {
-  return `${this.docs(data.collections.docs)}`;
+  return data.collections.docs.map(doc => `
+    <article>
+      <h2><a href="/${doc.fileSlug}">${doc.data.title}</a></h2>
+      ${doc.templateContent}
+    </article>
+  `, this).join('')
 };
