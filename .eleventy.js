@@ -12,23 +12,24 @@ const markdownOptions = {
   linkify: true,
 };
 
-module.exports = function(config) {
+module.exports = function (config) {
+  config.setUseGitIgnore(false);
   config.addPlugin(syntaxHighlight);
   config.addPlugin(pluginTOC);
   config.addPlugin(ErrorOverlay);
 
   config.addShortcode('excerpt', excerpt);
-  config.addFilter('log', thing => console.log(thing));
+  config.addFilter('log', (thing) => console.log(thing));
 
   config.addPassthroughCopy({
-    'src/includes/css/*': 'css',
+    'src/assets/css/*': 'css',
   });
 
   config.addPassthroughCopy({
-    'src/img/*': 'img/',
+    'src/assets/fonts/*': 'fonts',
   });
 
-  config.addCollection('docs', collection => {
+  config.addCollection('docs', (collection) => {
     return [...collection.getFilteredByGlob('./docs/*.md')];
   });
 

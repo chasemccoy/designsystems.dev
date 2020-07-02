@@ -1,6 +1,7 @@
 ---
 title: Design tokens
 excerpt: The subatomic particles that make up further atoms, molecules, organisms, etc. in a design system.
+featured: true
 ---
 
 In the [taxonomy of design systems](/taxonomy), design tokens are fundamental elements—the subatomic particles that make up further atoms, molecules, organisms, etc. Design tokens are often represented as literal values representing styles like colors, type size, border radius, space, etc. 

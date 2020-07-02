@@ -13,13 +13,15 @@
 </head> 
 <body> 
   <div id='site-wrapper'>
-    {% include 'header.html' %}
+    <div class='site-layout'>
+      {% include 'header.html' %}
 
-    <main> 
-      {{ content | safe }}
-    </main> 
+      <main> 
+        {{ content | safe }}
+      </main> 
 
-    {% include 'footer.html' %}
+      {# {% include 'footer.html' %} #}
+    </div>
   </div>
 </body> 
 </html>

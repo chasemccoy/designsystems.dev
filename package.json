@@ -7,10 +7,10 @@
   "scripts": {
     "build": "yarn build:css && yarn build:11ty",
     "build:11ty": "eleventy",
-    "build:css": "postcss src/styles/index.css -o src/includes/css/styles.css",
+    "build:css": "postcss src/styles/index.css -o src/assets/css/styles.css",
     "start": "concurrently -n css,11ty yarn:watch:css yarn:watch:11ty",
     "watch:11ty": "eleventy --serve",
-    "watch:css": "postcss src/styles/index.css -o src/includes/css/styles.css --watch"
+    "watch:css": "postcss src/styles/index.css -o src/assets/css/styles.css --watch"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",

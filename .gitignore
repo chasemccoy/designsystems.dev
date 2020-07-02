@@ -67,4 +67,4 @@ yarn-error.log
 dist
 
 # Hide compiled CSS
-src/includes/css/*
+src/assets/css/*

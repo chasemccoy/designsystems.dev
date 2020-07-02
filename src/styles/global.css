@@ -1,10 +1,11 @@
 :root {
-  --wrapper-max-width: 100ch;
+  --wrapper-max-width: 1400px;
   --article-max-width: 60ch;
 
   --root-font-size: 18px;
   --font-text: Georgia, serif;
-  --font-header: var(--system-fonts);
+  /* --font-header: var(--system-fonts); */
+  --font-header: "Apple Garamond";
   --font-mono: "Input Mono", "Source Code Pro", "Monaco", monospace;
 }
 

@@ -1,5 +1,6 @@
-module.exports = function(doc) {
-  if (doc.data && doc.data.excerpt) return doc.data.excerpt;
+module.exports = function (doc, count = undefined) {
+  if (doc.data && doc.data.excerpt && count === undefined)
+    return `<p>${doc.data.excerpt}</p>`;
 
   if (!doc.hasOwnProperty('templateContent')) {
     console.warn(
@@ -10,14 +11,20 @@ module.exports = function(doc) {
 
   const pCloseTag = '</p>';
   const content = doc.templateContent;
-  if (content.includes(pCloseTag)) {
-    const firstParagraph = content.substring(
-      0,
-      content.indexOf(pCloseTag) + pCloseTag.length
-    );
-    const withoutHTMLTags = firstParagraph.replace(/<[^>]+>/g, '');
-    return withoutHTMLTags;
+
+  const numberOfParagraphs = count || 1;
+  let index = 0;
+  let cursor = 0;
+  let excerpt = '';
+
+  while (index < numberOfParagraphs && content.includes(pCloseTag, cursor)) {
+    const endPosition = content.indexOf(pCloseTag, cursor) + pCloseTag.length;
+    const paragraph = content.substring(cursor, endPosition);
+
+    excerpt += paragraph;
+    cursor = endPosition;
+    index++
   }
 
-  return '';
-}
+  return excerpt;
+};
