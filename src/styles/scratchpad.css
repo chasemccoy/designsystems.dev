@@ -1,0 +1,41 @@
+.pointer {
+  --color: var(--green-9);
+  --bg: var(--green-2);
+  --accent: var(--green-4);
+  --height: 28px;
+
+  /* width: 200px; */
+  height: var(--height);
+  position: relative;
+  background: var(--bg);
+  color: var(--color);
+  padding: 0 64px 0 16px;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
+}
+
+.pointer:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--accent);
+  /* border-left: calc(var(--height) / 3) solid var(--accent);
+  border-top: calc(var(--height) / 2) solid transparent;
+  border-bottom: calc(var(--height) / 2) solid transparent; */
+}
+
+.pointer:before {
+  content: '';
+  position: absolute;
+  right: calc(var(--height) / -3);
+  bottom: 0;
+  width: 0;
+  height: 0;
+  border-left: calc(var(--height) / 3) solid var(--bg);
+  border-top: calc(var(--height) / 2) solid transparent;
+  border-bottom: calc(var(--height) / 2) solid transparent;
+}

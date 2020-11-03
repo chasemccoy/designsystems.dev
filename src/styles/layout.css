@@ -24,7 +24,7 @@
   background: var(--gray-1);
   border-radius: 12px;
   min-height: 75vh;
-  margin-right: 80px;
+  margin-right: 64px;
   padding: 24px;
   word-break: break-all;
 }
@@ -36,9 +36,32 @@
     max-width: none;
   }
 
+  article.featured {
+    margin-bottom: 40px;
+  }
+
   article.featured .post-body {
     columns: 2 30ch;
   }
+}
+
+article.featured .read-more {
+  /* background: var(--green-4); */
+  /* padding: 4px;
+  border-radius: 8px;
+  border: 2px solid var(--gray-4); */
+  /* display: block; */
+  /* min-width: 200px; */
+  text-decoration: none;
+  /* text-align: center; */
+  font-family: var(--system-fonts);
+  font-weight: 600;
+  font-size: 0.7em;
+  margin-top: 32px;
+  /* color: white; */
+  /* color: var(--green-9); */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 article {
